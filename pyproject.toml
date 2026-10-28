@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xo-launchpad"
+version = "0.2.0"
+description = "Authenticated command line for XO Launchpad apps and deployments"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+xo-launchpad = "xo_launchpad.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+xo_launchpad = ["operations.json"]

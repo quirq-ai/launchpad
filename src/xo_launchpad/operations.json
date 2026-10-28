@@ -1,0 +1,313 @@
+{
+  "source": {
+    "repository": "sharmasuraj0123/xo-swarm-api",
+    "branch": "feat/launchpad-v2",
+    "commit": "fc15278aed118b2293b8d5b40365b63c111fb014"
+  },
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/launchpad/templates",
+      "handler": "list_templates",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "templates"
+    },
+    {
+      "method": "GET",
+      "path": "/launchpad/apps",
+      "handler": "list_apps",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app list"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/apps",
+      "handler": "create_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app create NAME"
+    },
+    {
+      "method": "GET",
+      "path": "/launchpad/apps/{app_id}",
+      "handler": "get_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app get APP"
+    },
+    {
+      "method": "DELETE",
+      "path": "/launchpad/apps/{app_id}",
+      "handler": "delete_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app delete APP"
+    },
+    {
+      "method": "GET",
+      "path": "/launchpad/apps/{app_id}/status",
+      "handler": "app_status",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app status APP"
+    },
+    {
+      "method": "GET",
+      "path": "/launchpad/apps/{app_id}/logs",
+      "handler": "app_logs",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app logs APP"
+    },
+    {
+      "method": "GET",
+      "path": "/launchpad/apps/{app_id}/events",
+      "handler": "app_events",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app events APP"
+    },
+    {
+      "method": "GET",
+      "path": "/launchpad/apps/{app_id}/artifacts",
+      "handler": "app_artifacts",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app artifacts APP"
+    },
+    {
+      "method": "GET",
+      "path": "/launchpad/apps/{app_id}/releases",
+      "handler": "app_releases",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app releases APP"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/apps/{app_id}/deploy",
+      "handler": "deploy_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app deploy APP"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/apps/{app_id}/rollback",
+      "handler": "rollback_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app rollback APP RELEASE_ID"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/apps/{app_id}/start",
+      "handler": "start_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app start APP"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/apps/{app_id}/stop",
+      "handler": "stop_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app stop APP"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/apps/{app_id}/restart",
+      "handler": "restart_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app restart APP"
+    },
+    {
+      "method": "GET",
+      "path": "/launchpad/apps/{app_id}/domains",
+      "handler": "list_domains",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app domains list APP"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/apps/{app_id}/domains",
+      "handler": "add_domain",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app domains add APP HOST"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/apps/{app_id}/domains/{domain_id}/verify",
+      "handler": "verify_domain",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app domains verify APP DOMAIN_ID"
+    },
+    {
+      "method": "DELETE",
+      "path": "/launchpad/apps/{app_id}/domains/{domain_id}",
+      "handler": "remove_domain",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app domains remove APP DOMAIN_ID"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/apps/{app_id}/robots/push/rotate",
+      "handler": "rotate_push_robot",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app credentials rotate APP"
+    },
+    {
+      "method": "GET",
+      "path": "/launchpad/apps/{app_id}/env",
+      "handler": "get_env",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app env list APP"
+    },
+    {
+      "method": "PUT",
+      "path": "/launchpad/apps/{app_id}/env",
+      "handler": "put_env",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app env replace APP"
+    },
+    {
+      "method": "PUT",
+      "path": "/launchpad/apps/{app_id}/storage",
+      "handler": "resize_storage",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app storage resize APP GB"
+    },
+    {
+      "method": "PUT",
+      "path": "/launchpad/apps/{app_id}/port",
+      "handler": "update_port",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app port set APP PORT"
+    },
+    {
+      "method": "PUT",
+      "path": "/launchpad/apps/{app_id}/health",
+      "handler": "update_health",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "app health set APP --path PATH"
+    },
+    {
+      "method": "POST",
+      "path": "/harbor-registry-config",
+      "handler": "harbor_registry_config",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /harbor-registry-config"
+    },
+    {
+      "method": "POST",
+      "path": "/get-deployment-details-by-user-id",
+      "handler": "get_deployment_details_by_user_id",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /get-deployment-details-by-user-id"
+    },
+    {
+      "method": "POST",
+      "path": "/deploy-to-xo",
+      "handler": "deploy_to_xo",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /deploy-to-xo"
+    },
+    {
+      "method": "POST",
+      "path": "/get-xo-app-logs",
+      "handler": "get_xo_app_logs",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /get-xo-app-logs"
+    },
+    {
+      "method": "POST",
+      "path": "/delete-xo-app",
+      "handler": "delete_xo_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /delete-xo-app"
+    },
+    {
+      "method": "POST",
+      "path": "/update-target-port",
+      "handler": "update_target_port",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /update-target-port"
+    },
+    {
+      "method": "POST",
+      "path": "/start-xo-app",
+      "handler": "start_xo_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /start-xo-app"
+    },
+    {
+      "method": "POST",
+      "path": "/stop-xo-app",
+      "handler": "stop_xo_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /stop-xo-app"
+    },
+    {
+      "method": "POST",
+      "path": "/redeploy-xo-app",
+      "handler": "redeploy_xo_app",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /redeploy-xo-app"
+    },
+    {
+      "method": "POST",
+      "path": "/github-main-flow",
+      "handler": "github_main_flow",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /github-main-flow"
+    },
+    {
+      "method": "POST",
+      "path": "/deploy-n8n",
+      "handler": "deploy_n8n",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /deploy-n8n"
+    },
+    {
+      "method": "POST",
+      "path": "/deploy-gaia",
+      "handler": "deploy_gaia",
+      "audience": "user",
+      "auth": "XO_API_KEY",
+      "command": "api POST /deploy-gaia"
+    },
+    {
+      "method": "POST",
+      "path": "/launchpad/webhooks/harbor",
+      "handler": "harbor_webhook",
+      "audience": "service",
+      "auth": "LAUNCHPAD_WEBHOOK_SECRET",
+      "command": null
+    }
+  ]
+}
